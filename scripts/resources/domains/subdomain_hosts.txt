@@ -1,0 +1,10 @@
+vercel.app
+walrus.site
+netlify.app
+web.app
+blob.store
+ngrok-free.app
+cloudfront.net
+suins.io
+github.io
+pages.dev

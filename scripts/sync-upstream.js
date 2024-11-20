@@ -3,6 +3,7 @@ const { GoogleAuth } = require("google-auth-library");
 const { Buffer } = require("buffer");
 const fs = require("fs");
 const path = require("path");
+const { testBlocklist } = require("./test-blocklist");
 
 async function fetchUpstreamSheet() {
   const credentialsJSON = Buffer.from(
@@ -74,12 +75,28 @@ function extractAddressByType(data, type) {
   return addresses;
 }
 
-function updateFile(spreadsheetData) {
+async function fetchGardians() {
+  const url = "https://raw.githubusercontent.com/suiet/guardians/main/src/";
+  const fileNames = ["coin-list.json", "domain-list.json", "object-list.json", "package-list.json"];
+  const guardiansData = {};
+
+  for (const fileName of fileNames) {
+    const fileUrl = url + fileName;
+    const response = await fetch(fileUrl, { method: "GET" });
+    const jsonData = await response.json();
+    guardiansData[fileName.replace("-list.json", "")] = jsonData;
+  }
+
+  return guardiansData;
+}
+
+function updateFile(spreadsheetData, gardiansData) {
   const fs = require("fs");
   const path = require("path");
 
   const types = Object.keys(spreadsheetData);
   console.log(types);
+  let fail = false;
   types.forEach((type) => {
     const filePath = path.resolve(
       __dirname,
@@ -97,10 +114,18 @@ function updateFile(spreadsheetData) {
 
     // Merge new addresses into blocklist, sort and deduplicate
     const updatedBlocklist = Array.from(
-      new Set([...data.blocklist, ...spreadsheetData[type]])
+      new Set([...data.blocklist, ...gardiansData[type].blocklist, ...spreadsheetData[type]])
     );
     updatedBlocklist.sort();
 
+    console.log(`Checking ${type} for false positives.`);
+    const false_positive = testBlocklist(updatedBlocklist, type, __dirname);
+    if (false_positive) {
+      console.error(`Blocklist for ${type} found false positive:`, false_positive);
+      fail = true;
+      return;
+    }
+    
     // Update blocklist and write back to the file
     data.blocklist = updatedBlocklist;
     try {
@@ -110,11 +135,15 @@ function updateFile(spreadsheetData) {
       console.error(`Error writing file for ${type}:`, error);
     }
   });
+
+  return fail;
 }
 
 async function run() {
   const sheetData = await fetchUpstreamSheet();
-  updateFile(sheetData);
+  const gardiansData = await fetchGardians();
+  const errors = updateFile(sheetData, gardiansData);
+  process.exitCode = errors ? 1 : 0;
   // console.log(sheetData)
 }
 
