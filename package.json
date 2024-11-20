@@ -9,6 +9,7 @@
   "keywords": [],
   "author": "",
   "license": "ISC",
+  "type": "module",
   "dependencies": {
     "google-auth-library": "^9.9.0",
     "googleapis": "^135.0.0"
