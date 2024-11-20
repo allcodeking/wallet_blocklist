@@ -1,5 +1,6 @@
 {
   "blocklist": [
+    "0x0043cc320f938ab6bf2a0ba205de94505c43e4bcd6360ce09e48d4ae0b0c3473::suirt::SUIRT",
     "0x0144f1ec485fac870507199292c754c1bb302bc6170cb78931360e7f36314696::BucketReward::BUCKETREWARD",
     "0x020e54dece205ba8dcfc7b04bcafea67a047fff63b83d266e3d19e8bc57142f8::srt::SRT",
     "0x043a9bd4cd74f93e861b8a3138a373e726bb1f7bf8f4f38cde4872f0234ed20b::usdt::USDT",
