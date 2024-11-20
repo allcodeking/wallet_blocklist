@@ -1,9 +1,12 @@
-const { google } = require("googleapis");
-const { GoogleAuth } = require("google-auth-library");
-const { Buffer } = require("buffer");
-const fs = require("fs");
-const path = require("path");
-const { testBlocklist } = require("./test-blocklist");
+import { google } from "googleapis";
+import { GoogleAuth } from "google-auth-library";
+import { Buffer } from "buffer";
+import fs from "fs";
+import path from "path";
+import {testBlocklist} from "./test-blocklist.js";
+import { fileURLToPath } from 'url';
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
 
 async function fetchUpstreamSheet() {
   const credentialsJSON = Buffer.from(
@@ -91,9 +94,6 @@ async function fetchGardians() {
 }
 
 function updateFile(spreadsheetData, gardiansData) {
-  const fs = require("fs");
-  const path = require("path");
-
   const types = Object.keys(spreadsheetData);
   console.log(types);
   let fail = false;

@@ -1,7 +1,5 @@
 import fs from 'fs';
 import path from 'path';
-
- 
  
 export function testBlocklist(updatedBlocklist, type, baseDir) {
     if (type === 'domain') {
