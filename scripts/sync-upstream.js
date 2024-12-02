@@ -79,7 +79,7 @@ function extractAddressByType(data, type) {
 }
 
 async function fetchGardians() {
-  const url = "https://raw.githubusercontent.com/suiet/guardians/main/src/";
+  const url = "https://raw.githubusercontent.com/suiet/guardians/main/dist/";
   const fileNames = ["coin-list.json", "domain-list.json", "object-list.json", "package-list.json"];
   const guardiansData = {};
 
