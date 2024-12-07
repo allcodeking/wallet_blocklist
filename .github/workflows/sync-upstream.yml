@@ -5,7 +5,7 @@ on:
     branches:
       - main
   schedule:
-    - cron: "*/10 * * * *" # Execute every 10 minutes
+    - cron: "10 * * * *" # Execute at 10 minutes past the hour.
   workflow_dispatch: # allow manually trigger the action
 
 jobs:
