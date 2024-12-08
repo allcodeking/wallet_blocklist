@@ -9,3 +9,4 @@ suins.io
 github.io
 pages.dev
 localhost
+herokuapp.com
