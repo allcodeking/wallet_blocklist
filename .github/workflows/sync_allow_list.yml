@@ -1,4 +1,4 @@
-name: Sync Upstream
+name: Sync Allowlist
 
 on:
   workflow_dispatch: # allow manually trigger the action
