@@ -100,7 +100,7 @@ function updateFile(spreadsheetData, gardiansData) {
   types.forEach((type) => {
     const filePath = path.resolve(
       __dirname,
-      `../src/${type.toLowerCase()}-list.json`
+      `../blocklists/${type.toLowerCase()}-list.json`
     );
     // Read the existing JSON file
     let data = {};

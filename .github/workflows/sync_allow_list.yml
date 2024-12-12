@@ -1,11 +1,6 @@
 name: Sync Upstream
 
 on:
-  push:
-    branches:
-      - main
-  schedule:
-    - cron: "10 * * * *" # Execute at 10 minutes past the hour.
   workflow_dispatch: # allow manually trigger the action
 
 jobs:
@@ -22,17 +17,11 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v3 # Use the GitHub checkout action to checkout code
 
-      - uses: pnpm/action-setup@v3
-        with:
-          version: 8
-      - name: Install dependencies using PNPM
-        run: pnpm install
-
-      - name: Run script
-        run: pnpm sync-upstream # Execute your Node.js script
-      
-      - name: Copy blocklists to src
-        run: cp -rf ../blocklists/*.json ../src/
+      - name: Get Allow List
+        env:
+          TOKEN: ${{ secrets.repo_token }}
+        run: |
+          curl -H "Authorization: token ${TOKEN}" https://raw.githubusercontent.com/acct/repo2/main/test.json
 
       - name: Commit changes
         run: |
