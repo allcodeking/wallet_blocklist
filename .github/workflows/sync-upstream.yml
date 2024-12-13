@@ -17,6 +17,9 @@ jobs:
     env:
       GOOGLE_APPLICATION_CREDENTIALS_BASE64: ${{ secrets.GOOGLE_APPLICATION_CREDENTIALS_BASE64 }}
       MYSTEN_SPREEDSHEET_ID: ${{ secrets.MYSTEN_SPREEDSHEET_ID }}
+      BLOCKLISTS_URL: ${{ secrets.BLOCKLISTS_URL }}
+      READ_ACCESS_TOKEN: ${{ secrets.READ_ACCESS_TOKEN }}
+
 
     steps:
       - name: Checkout code

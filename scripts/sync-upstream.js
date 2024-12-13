@@ -93,7 +93,24 @@ async function fetchGardians() {
   return guardiansData;
 }
 
-function updateFile(spreadsheetData, gardiansData) {
+async function fetchBlocklists() {
+  const url = process.env.BLOCKLISTS_URL;
+  const token = 'token ' + process.env.READ_ACCESS_TOKEN;
+
+  const fileNames = ["coin-list.json", "domain-list.json", "object-list.json", "package-list.json"];
+  const blocklistData = {};
+
+  for (const fileName of fileNames) {
+    const fileUrl = url + fileName;
+    const response = await fetch(fileUrl, { method: "GET", headers: { "Authorization": token } });
+    const jsonData = await response.json();
+    blocklistData[fileName.replace("-list.json", "")] = jsonData;
+  }
+
+  return blocklistData;
+}
+
+function updateFile(spreadsheetData, gardiansData, blocklistData) {
   const types = Object.keys(spreadsheetData);
   console.log(types);
   let fail = false;
@@ -114,7 +131,7 @@ function updateFile(spreadsheetData, gardiansData) {
 
     // Merge new addresses into blocklist, sort and deduplicate
     const updatedBlocklist = Array.from(
-      new Set([...data.blocklist, ...gardiansData[type].blocklist, ...spreadsheetData[type]])
+      new Set([...data.blocklist, ...gardiansData[type].blocklist, ...spreadsheetData[type], ...blocklistData[type].blocklist])
     );
     updatedBlocklist.sort();
 
@@ -142,7 +159,8 @@ function updateFile(spreadsheetData, gardiansData) {
 async function run() {
   const sheetData = await fetchUpstreamSheet();
   const gardiansData = await fetchGardians();
-  const errors = updateFile(sheetData, gardiansData);
+  const blocklistData = await fetchBlocklists();
+  const errors = updateFile(sheetData, gardiansData, blocklistData);
   process.exitCode = errors ? 1 : 0;
   // console.log(sheetData)
 }
