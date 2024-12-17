@@ -10,3 +10,5 @@ github.io
 pages.dev
 localhost
 herokuapp.com
+ondigitalocean.app
+onrender.com
