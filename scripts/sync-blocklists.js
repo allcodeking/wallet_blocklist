@@ -111,7 +111,7 @@ async function fetchBlocklists() {
 }
 
 function updateFile(spreadsheetData, gardiansData, blocklistData) {
-  const types = Object.keys(spreadsheetData);
+  const types =  ["coin", "domain", "object", "package"];
   console.log(types);
   let fail = false;
   types.forEach((type) => {
@@ -157,7 +157,12 @@ function updateFile(spreadsheetData, gardiansData, blocklistData) {
 }
 
 async function run() {
-  const sheetData = await fetchUpstreamSheet();
+  const shouldFetchSheet = process.env.SHOULD_FETCH_SHEET;
+  let sheetData = {"coin":[],"object":[],"package":[],"domain":[]};
+  if (shouldFetchSheet === "true") {
+    sheetData = await fetchUpstreamSheet();
+  }
+  
   const gardiansData = await fetchGardians();
   const blocklistData = await fetchBlocklists();
   const errors = updateFile(sheetData, gardiansData, blocklistData);
