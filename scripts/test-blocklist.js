@@ -61,6 +61,7 @@ export function testBlocklist(updatedBlocklist, type, baseDir) {
             // These are on our list only, need to investigate
             'ltcminer.com',
             'usermd.net',
+            'tw1.ru',
             ]);
 
         for (const file of files) {
