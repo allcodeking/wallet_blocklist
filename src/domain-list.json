@@ -1,5 +1,4 @@
 {
-  "allowlist": [],
   "blocklist": [
     "0-metemask.com",
     "000frosty.vercel.app",
@@ -49855,5 +49854,6 @@
     "zyberswap.pro",
     "zz.ethshop.vip",
     "zzuc.coinbasez.com"
-  ]
+  ],
+  "allowlist": []
 }
