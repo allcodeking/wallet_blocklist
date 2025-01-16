@@ -484,5 +484,6 @@
     "0xfd9b143e67318dd2fc8e0419d9ac1f98e933b18d94291c6d8687619b2da09b9e::usdt::USDT",
     "0xff391ef1d9ecaf08e0ce6df96a0a451444e3f1e091a5f3786230e8ce43239ddf::NaviReward::NAVIREWARD",
     "0xff75ffb5fd2b01ec7cde2d58e499cdf585813c5d376369634188110b2eeef7b4::ctx::CTX"
-  ]
+  ],
+  "allowlist": []
 }
