@@ -30,26 +30,9 @@ function updateFile(allowlistData) {
       __dirname,
       `../allowlists/${type.toLowerCase()}-list.json`
     );
-    // Read the existing JSON file
-    let data = {};
-    try {
-      data = JSON.parse(fs.readFileSync(filePath, "utf8"));
-      console.log(`Read ${type}-list.json successfully.`);
-    } catch (error) {
-      console.error(`Error reading file for ${type}:`, error);
-      return;
-    }
 
-    // Merge new addresses into allowlist, sort and deduplicate
-    const updatedAllowlist = Array.from(
-      new Set([...data.allowlist, ...allowlistData[type].allowlist])
-    );
-    updatedAllowlist.sort();
-
-    // Update blocklist and write back to the file
-    data.allowlist = updatedAllowlist;
     try {
-      fs.writeFileSync(filePath, JSON.stringify(data, null, 2), "utf8");
+      fs.writeFileSync(filePath, JSON.stringify(allowlistData[type], null, 2), "utf8");
       console.log(`${type}-list.json updated successfully.`);
     } catch (error) {
       console.error(`Error writing file for ${type}:`, error);
