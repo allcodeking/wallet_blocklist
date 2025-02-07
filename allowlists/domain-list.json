@@ -77,11 +77,13 @@
     "bucket-frontend-v5-git-feat-scoin-bucket-labs.vercel.app",
     "bucketprotocol.io",
     "buckyou.io",
+    "bugpub.org",
     "buildersofstuff.com",
     "bulksender.app",
     "bw-app-xcs-qa.vercel.app",
     "callboynft.xyz",
     "caposui.xyz",
+    "capy.art",
     "capybara.vip",
     "celer.network",
     "cetus-aggregator-mainnet.netlify.app",
@@ -368,6 +370,7 @@
     "sui-red-packet.vercel.app",
     "sui-scallop-dapp-git-hotfix-scallop-team.vercel.app",
     "sui-scallop-dapp-git-sui-wallet-campaign-scallop-team.vercel.app",
+    "sui-typescript-docs-mysten-labs.vercel.app",
     "sui.gallery",
     "sui.io",
     "suia.io",
@@ -387,8 +390,11 @@
     "suidollar.io",
     "suiemoji.fun",
     "suiet.app",
+    "suiexplorer.com",
     "suifrens.ai",
     "suifrens.com",
+    "suifrens.io",
+    "suifrens.xyz",
     "suigallerie.xyz",
     "suigar.com",
     "suigeneris.auction",
@@ -470,6 +476,7 @@
     "xociety.io",
     "yousui.io",
     "zebec.io",
-    "zip2box.com"
+    "zip2box.com",
+    "zksend.com"
   ]
 }
