@@ -117,7 +117,6 @@
     "0x34f3ccbbeea762afcd8a022ca2f736a5632cf733a30bb1fbb9ee8b49eb819df2::ctx::CTX",
     "0x34fca234717756e6c98c24830eac4f306866d4d2f2034cd8d6ff060bdb7d7921::ctx::CTX",
     "0x351c2adaaa358e4dc960376e8f8d48e225167c361425b3c0ed096e7ac0016397::srwdio::SRWDIO",
-    "0x356a26eb9e012a68958082340d4c4116e7f55615cf27affcff209cf0ae544f59::wal::WAL",
     "0x35b10b3e7ca58069c28e58ace50fa58e5e20c9ae9d5265200eb0ff3a62afb0a5::SRT::SRT",
     "0x35d1eae007784e06267fe3c59803ca890af331f6204e17eeebdc9b5153afd544::srwdio::SRWDIO",
     "0x36668f22225d8d7fa053321f205e430fe7f80ce7919612b2c0094f961e4db75d::usdt::USDT",
@@ -608,5 +607,7 @@
     "0xff391ef1d9ecaf08e0ce6df96a0a451444e3f1e091a5f3786230e8ce43239ddf::NaviReward::NAVIREWARD",
     "0xff75ffb5fd2b01ec7cde2d58e499cdf585813c5d376369634188110b2eeef7b4::ctx::CTX"
   ],
-  "allowlist": []
+  "allowlist": [
+    "0x356a26eb9e012a68958082340d4c4116e7f55615cf27affcff209cf0ae544f59::wal::WAL"
+  ]
 }
