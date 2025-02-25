@@ -68,10 +68,23 @@ export function testBlocklist(updatedBlocklist, type, baseDir) {
             const filePath = path.join(directoryPath, file);
             const data = fs.readFileSync(filePath, 'utf8');
             const domains = data.split('\n').map(domain => domain.trim());
-            const filteredDomains = domains.filter(domain => !bypass.has(domain));
+            const filteredDomains = domains.filter(domain => !bypass.has(domain) && domain !== '');
             const foundDomain = updatedBlocklist.find(domain => filteredDomains.includes(domain));
+            
             if (foundDomain) {
                 return foundDomain;
+            }
+            
+            if (file ==='defis.txt') {
+                const foundSubdomain = updatedBlocklist.find(domain => { 
+                    return filteredDomains.some(filteredDomain => {
+                        return domain === filteredDomain || domain.endsWith(`.${filteredDomain}`);
+                    });
+                });
+
+                if (foundSubdomain) {
+                    return foundSubdomain;
+                }
             }
         }
         return;

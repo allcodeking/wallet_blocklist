@@ -12,3 +12,9 @@ localhost
 herokuapp.com
 ondigitalocean.app
 onrender.com
+tinyurl.com
+amazonaws.com
+fly.dev
+hosted.app
+t.me
+co.dev

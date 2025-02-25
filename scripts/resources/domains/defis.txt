@@ -6,7 +6,6 @@ scallop.io
 volo.fi
 haedal.xyz
 springsui.com
-aftermath.finance
 alphafi.xyz
 bucketprotocol.io
 kriya.finance
