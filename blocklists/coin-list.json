@@ -169,6 +169,7 @@
     "0x4b6979bc09e80682373deb728b1bb1d6ef6727ae3cd110f7d4cb3904b3ac6e0b::ctx::CTX",
     "0x4c2fcb40ed56a229aa890e604bfc10aa85f5a520f2a9aa6693b7ebce476746fe::srwdio::SRWDIO",
     "0x4d097129bb1425840f8fd8bdaabb71bbe4e670025ce9b46330b9096be4edb7b4::ctx::CTX",
+    "0x4d4b7cd9d4d9bb1cb2fcf925dc278185ebecb52528dac8780cd89aa0bef17c6b::wal::WAL",
     "0x4d5a4af5c9e2a0f9bd6e9c3f3b7367d0ed5b37215fc2cc84212c9e779afffab7::ctx::CTX",
     "0x4d8c7740974e666f874fcee346fb2cc43d3bbf2200fa0bc8e00b49adfb05a523::srwdio::SRWDIO",
     "0x4e1917b4ec92eebdadf9fb3ce6c655d0085e865f0cb133f92374493300f81281::AftermathReward::AFTERMATHREWARD",
