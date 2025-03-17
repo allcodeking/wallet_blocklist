@@ -18,3 +18,5 @@ fly.dev
 hosted.app
 t.me
 co.dev
+wal.site
+wal.app
