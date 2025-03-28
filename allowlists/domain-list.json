@@ -1,6 +1,6 @@
 {
   "allowlist": [
-    "wal.app",
-    "wal.site"
+    "wal.site",
+    "wal.app"
   ]
 }
