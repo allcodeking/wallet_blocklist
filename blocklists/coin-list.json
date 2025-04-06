@@ -358,6 +358,7 @@
     "0x85a56e2c6118602c96d5d8e33377967c5361ec1d5e36287dc36cf05caea70bf4::srwdio::SRWDIO",
     "0x85cfc30caeb31aef154c41f39a0ca6d8b1e0ed2c43e87f8ef8c20af216573ebf::coin::COIN",
     "0x8631b541684a8cc1be1805eb4d537f679408021723d686051048ce1ba9effeec::srwdio::SRWDIO",
+    "0x8635841bfc10a0bd67c8511b7360b3982c1faec8fd29943962dcc3f09f6de627::privatecoin::PRIVATECOIN",
     "0x87515dfacfc67193aab38ba6bc3d384d426f65deb19fa7272af46961defe3cfb::wal::WAL",
     "0x876b4853a2d8d3a23be087a17afcac95eb83e11bf6bf81a38db2be7b7a4fe65c::sui::SUI",
     "0x87b935d57f606cbb3359ee24600dc053aa8f35d568127c3d4a428568043cffd7::ctx::CTX",
