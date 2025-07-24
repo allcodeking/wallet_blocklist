@@ -268,6 +268,7 @@
     "0x471f9dff397bbd9843ee7f33349f788cf9b88b4a167b85994d57025fa8f3c775::sui::SUI",
     "0x473e9ba7f22ce8d4293bef35dd448d705dd7db5f88a71e8c579befad6ebf5705::wal::WAL",
     "0x47db45dd01b1c803a5c5f08fa67b4260cd279b68497c836c4169adc8e8798af7::st::ST",
+    "0x482880f326c0ca90d126b28d75212a98d6fd7d0077d2d0c973e7fd911df93176::usdt::USDT",
     "0x482ded1bb84cb577b1487c24464c26a993c81fde3c7a97aa800b1c099ebae3e5::musd::mUSD",
     "0x483a90eb70bf8f69bea1f7acdf387de0c251adfc019feceb5cf1bf5c60ebfc23::usdc::USDC",
     "0x48bb744b94f2a2c69afb9ea6123a9aa4569fde751af2869fb6fa4f7c0ca296b0::swavo_points::SWAVO_POINTS",
