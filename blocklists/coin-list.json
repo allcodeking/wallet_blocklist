@@ -1107,6 +1107,8 @@
     "0x9ae3e0d0c3bc1bda6106b009d41a67f40bb6eac4291bacb9ed2908fe95e7357d::srwdio::SRWDIO",
     "0x9b0dc431c81cd759e3261cf47b02f782c9e3ddff76e7e01226dc58b57e6698a4::swavo_points::SWAVO_POINTS",
     "0x9b2fee5854fb531933346f7bd0959965aa99504bb746dc100c530d53009296d3::swavo_points::SWAVO_POINTS",
+    "0x9b7abd35bf15bce6f9440f5ea0dc24c22ee45b6f9d6b2d06115fa2d2b4acb8cf::mock_sui::MOCK_SUI",
+    "0x9b7abd35bf15bce6f9440f5ea0dc24c22ee45b6f9d6b2d06115fa2d2b4acb8cf::mock_usdc::MOCK_USDC",
     "0x9b896cf88a71bd84e63d4dd4a15663e0ed2e1b4c6a7b8de8c74eb054a72381a5::swavo_points::SWAVO_POINTS",
     "0x9b989a484e9b77afbd963b47895a2a3253e9090cbe1b32cbf16fa511a542c663::st::ST",
     "0x9ba33fe00290895a1184bac6f01be084d45e228ad42e033eaa68901d30ba7889::wal::WAL",
